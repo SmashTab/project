@@ -1,0 +1,57 @@
+<!doctype html>
+<head>
+<title>ФОРМА</title>
+<link href="style.css" rel="stylesheet" >
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<script src="granim.min.js"></script>
+</head>
+<body>
+    <div>
+            <canvas id="canvas-basic"></canvas>
+            <div id="head"><h2>РЕГИСТРАЦИЯ</h2></div>
+            <div id="form" >
+                   <form name="login">
+                       <h3>Введите ваш емейл:
+                        <input type="email"><br>
+                        Введите ваш пароль:
+                        <input type="password"><br>
+                        Ваш пол:<br>
+                        <input type="radio" value="Male">Мужчина<br>
+                        <input type="radio" value="Famale">Женщина<br>
+                        Дата рождения:<br>
+                        <input type="date"><br>
+                        Место жительства:<br>
+                        <select>
+                            <option selected disabled>Страна</option>
+                            <option>Белорусь</option>
+                            <option>Украина</option>
+                            <option>Росия</option>
+                        </select><br>
+                        Принимаю <a href="">пользовательское соглашение</a><br>
+                        <input type="checkbox"><br>
+                        <button class="buttons" type="submit">Готово!</button>
+                    </h3>
+                   </form>
+            </div>
+    </div>
+   
+<script>
+    var granimInstance = new Granim({
+    element: '#canvas-basic',
+    name: 'basic-gradient',
+    direction: 'left-right', // 'diagonal', 'top-bottom', 'radial'
+    opacity: [1, 1],
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#AA076B', '#61045F'],
+                ['#02AAB0', '#00CDAC'],
+                ['#DA22FF', '#9733EE']
+            ]
+        }
+    } 
+});
+</script>
+
+</body>
